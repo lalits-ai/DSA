@@ -19,7 +19,6 @@ void Stack::push(char ch)
   else
   {
     st[++top] = ch;
-    size++;
   }
 }
 char Stack::pop()
@@ -31,7 +30,6 @@ char Stack::pop()
   }
   else
   {
-    size--;
     return st[top--];
   }
 }
@@ -40,3 +38,9 @@ int Stack::getTop()
   return st[top];
 }
 
+void Stack::displayStack()
+{
+  for(int i=0;i<5;i++)
+    cout<<st[i]<<" ";
+  cout<<endl;
+}
